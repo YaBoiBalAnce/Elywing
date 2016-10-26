@@ -1245,24 +1245,18 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 				continue;
 			}
 
-			if($entity instanceof Arrow and $entity->hadCollision){
+		if($entity instanceof Arrow and $entity->hadCollision){
 				$item = Item::get(Item::ARROW, 0, 1);
-
-				$add = false;
-				if(!$this->isCreative()){
-				//if($this->isSurvival() and !$this->inventory->canAddItem($item)){
-					if(!$this->getFloatingInventory()->canAddItem($item) or !$this->inventory->canAddItem($item)){
-						continue;
-					}
-					$add = true;
+				if($this->isSurvival() and !$this->inventory->canAddItem($item)){
+					continue;
 				}
-
 				$this->server->getPluginManager()->callEvent($ev = new InventoryPickupArrowEvent($this->inventory, $entity));
 				if($ev->isCancelled()){
 					continue;
 				}
 
-				$pk = new TakeItemEntityPacket();
+			
+                                $pk = new TakeItemEntityPacket();
 				$pk->eid = $this->getId();
 				$pk->target = $entity->getId();
 				Server::broadcastPacket($entity->getViewers(), $pk);
