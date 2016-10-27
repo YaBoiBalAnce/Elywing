@@ -475,6 +475,7 @@
 	  "Raw Rabbit":{"ID":411,"Damage":0},
 	  "Cooked Rabbit":{"ID":412,"Damage":0},
 	  "Rabbit Stew":{"ID":413,"Damage":0},
+	  "Nether Star":{"ID":399,"Damage":0},
 	  "Magma Cream":{"ID":378,"Damage":0},
 	  "Blaze Rod":{"ID":369,"Damage":0},
 	  "Gold Nugget":{"ID":371,"Damage":0},
@@ -491,6 +492,8 @@
 	  "Fermented Spider Eye":{"ID":376,"Damage":0},
 	  "Carrot on a Stick":{"ID":398,"Damage":0},
 	  "Bottle o' Enchanting":{"ID":384,"Damage":0},
+	  "Prismarine Shard":{"ID":409,"Damage":0},
+	  "Prismarine Crystals":{"ID":422,"Damage":0},
 	  
 	  "Inc Sac":{"ID":351,"Damage":0},
 	  "Grey Dye":{"ID":351,"Damage":8},

@@ -19,42 +19,11 @@
  *
 */
 
-namespace pocketmine\block;
+namespace pocketmine\item;
 
-//use pocketmine\inventory\BeaconInventory;
-use pocketmine\item\Item;
-use pocketmine\Player;
 
-class BeaconBlock extends Solid{
-
-	protected $id = self::BEACON_BLOCK;
-
-	public function __construct($meta = 0){
-		$this->meta = $meta;
+class NetherStar extends Item{
+	public function __construct($meta = 0, $count = 1){
+		parent::__construct(self::NETHER_STAR, $meta, $count, "Nether Star");
 	}
-
-	/*public function canBeActivated(){
-		return true;
-	}*/
-
-	public function getLightLevel(){
-		return 15;
-	}
-
-	public function getHardness(){
-		return 3;
-	}
-
-	public function getName(){
-        return "Beacon Block";
-	}
-
-	/*public function onActivate(Item $item, Player $player = null){
-		if($player instanceof Player){
-			$player->addWindow(new BeaconInventory($this));
-		}
-
-		return true;
-	}*/
-
 }
